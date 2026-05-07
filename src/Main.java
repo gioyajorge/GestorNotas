@@ -21,14 +21,42 @@ public class Main {
 
             switch (opcion) {
                 case "1":
-                    System.out.println("Introduce el título");
-                    String titulo = scanner.nextLine();
+                    String titulo;
+                    do {
+                        System.out.println("Introduce el título");
+                        titulo = scanner.nextLine();
+                        if (titulo.isEmpty()) {
+                            System.out.println("El título no puede estar vacío");
+                        }
+                    } while (titulo.isEmpty());
 
-                    System.out.println("Introduce una descripción del contenido: ");
-                    String contenido = scanner.nextLine();
+                    String contenido;
+                    do {
+                        System.out.println("Introduce una descripción del contenido: ");
+                        contenido = scanner.nextLine();
+                        if (contenido.isEmpty()) {
+                            System.out.println("El contenido no puede estar vacío");
+                        }
+                    } while (contenido.isEmpty());
 
-                    System.out.println("¿Es importante?: ");
-                    boolean importancia = scanner.nextBoolean();
+                    boolean importante = false;
+                    while (true){
+                        System.out.println("¿Es importante?: ");
+                        String respuesta = scanner.nextLine();
+
+                        if (respuesta.equalsIgnoreCase("s")) {
+                            importante = true;
+                            break;
+                        } else if (respuesta.equalsIgnoreCase("n")) {
+                            importante = false;
+                            break;
+                        } else {
+                            System.out.println("Respuesta inválida. Usa 's' o 'n'");
+                        }
+                    }
+
+                    gestor.crearNota(titulo,contenido,importante);
+                    System.out.println("Nota creada correctamente.");
 
                     break;
                 case "2":
