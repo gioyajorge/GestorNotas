@@ -19,7 +19,9 @@ public class GestorNotas {
 
     // TODO: implementar listado
     public void listarNotas() {
-        // implementar en la fase correspondiente
+        for(Nota n: notas){
+            System.out.println(n);
+        }
     }
 
     // TODO: implementar filtro

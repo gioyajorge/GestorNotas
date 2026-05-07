@@ -60,7 +60,9 @@ public class Main {
 
                     break;
                 case "2":
-                    // TODO: implementar
+
+                    System.out.println("Mostrando todas las notas: ");
+                    gestor.listarNotas();
                     break;
                 case "3":
                     // TODO: implementar
