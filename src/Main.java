@@ -21,7 +21,15 @@ public class Main {
 
             switch (opcion) {
                 case "1":
-                    // TODO: implementar
+                    System.out.println("Introduce el título");
+                    String titulo = scanner.nextLine();
+
+                    System.out.println("Introduce una descripción del contenido: ");
+                    String contenido = scanner.nextLine();
+
+                    System.out.println("¿Es importante?: ");
+                    boolean importancia = scanner.nextBoolean();
+
                     break;
                 case "2":
                     // TODO: implementar

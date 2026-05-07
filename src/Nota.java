@@ -4,6 +4,9 @@ public class Nota {
     private String contenido;
     private boolean importante;
 
+
+
+
     public Nota(int id, String titulo, String contenido, boolean importante) {
         this.id = id;
         this.titulo = titulo;
