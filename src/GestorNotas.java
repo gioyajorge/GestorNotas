@@ -5,9 +5,11 @@ public class GestorNotas {
 
     private List<Nota> notas;
 
+
     public GestorNotas() {
         this.notas = new ArrayList<>();
     }
+
 
 
     private int contadorId = 1;
@@ -19,11 +21,17 @@ public class GestorNotas {
 
     // TODO: implementar listado
     public void listarNotas() {
-        // implementar en la fase correspondiente
+        for(Nota n: notas){
+            System.out.println(n);
+        }
     }
 
     // TODO: implementar filtro
     public void listarImportantes() {
-        // implementar en la fase correspondiente
+        for(Nota n: notas){
+            if(n.isImportante()){
+                System.out.println(n);
+            }
+        }
     }
 }
